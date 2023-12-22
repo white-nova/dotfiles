@@ -1,0 +1,13 @@
+- name: pinging
+  hosts: target
+  gather_facts: false
+  vars:
+    user_name: "test"
+
+  roles:
+    - ly
+    - waybar
+
+  tasks:
+    - name: ping
+      ping:

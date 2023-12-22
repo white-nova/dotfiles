@@ -1,0 +1,13 @@
+---
+# handlers file for seatd
+#
+- name: Enable_service
+  service:
+    name: seatd
+    enabled: true
+
+- name: Add_user_to_group
+  user:
+    name: "{{user_name}}"
+    groups: seatd
+    append: yes

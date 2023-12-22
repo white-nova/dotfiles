@@ -1,0 +1,10 @@
+---
+# tasks file for ranger
+- name: Install Ranger
+  community.general.pacman:
+    name: ranger
+    state: present
+  become: true
+  notify:
+    - Link_config
+    - Install_devicons

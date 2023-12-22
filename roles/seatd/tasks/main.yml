@@ -1,0 +1,10 @@
+---
+# tasks file for seatd
+- name: Install seatd
+  community.general.pacman:
+    name: seatd
+    state: present
+    
+  notify:
+    - Enable_servie
+    - Add_user_to_group

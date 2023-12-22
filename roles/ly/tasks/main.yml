@@ -1,0 +1,9 @@
+---
+# tasks file for ly
+- name: Install Ly 
+  community.general.pacman:
+    name: ly
+    state: present
+  notify: Enable Service
+  become: true
+
